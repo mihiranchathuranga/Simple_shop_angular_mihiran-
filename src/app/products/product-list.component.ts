@@ -15,6 +15,7 @@ export class ProductListComponent {
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
+    showImage: boolean = false;
 
     /*imageWidth and imageMargin are properties of the ProductListComponent Class"*/
     products: any[] = [{
