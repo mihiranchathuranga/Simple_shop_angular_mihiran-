@@ -1,7 +1,7 @@
 /*by using export it allows to use this class to other parts of the project*/
 /*we create the @Component to show that this is a component*/
 /*then we import the {Component } from @angular/core*/
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IProduct} from './product';
 
 @Component({
@@ -13,7 +13,7 @@ import {IProduct} from './product';
 })
 
 
-export class ProductListComponent {
+export class ProductListComponent implements OnInit{
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
@@ -45,6 +45,10 @@ export class ProductListComponent {
 
     toggleImage(): void {
         this.showImage = !this.showImage;
+    }
+
+    ngOnInit(): void {
+      console.log('In OnInit');
     }
 
 }
