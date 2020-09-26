@@ -8,6 +8,7 @@ import {IProduct} from './product';
     selector:'pm-products',
     templateUrl:'./product-list.component.html', /*we provide the path to our url.we create this 
     html file in the same directory we ccreate .ts file.therefore we can use ./ */
+    styleUrls:['./product-list.component.css']
 
 })
 
