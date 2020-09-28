@@ -21,12 +21,14 @@ export class ProductListComponent implements OnInit{
     
     //listFilter: string = 'cart'
     _listFilter: string;
+
     get listFilter(): string{
       return this._listFilter;
     }
 
     set listFilter(value:string){
       this._listFilter = value;
+      this.filteredProducts=this.listFilter ? this.performFilter(this.listFilter): this.products;
     }
 
     filteredProducts: IProduct[];
